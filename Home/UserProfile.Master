@@ -1,0 +1,649 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserProfile.master.cs" Inherits="Home.UserProfile" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><%: this.Page.Title %></title>
+    <link href="Styles/Site.css" rel="Stylesheet" type="text/css" />
+   
+    <style type="text/css">
+       
+      .style4
+        {
+            width: 100%;
+            height: 95px;
+            float:right;
+            z-index:+1;
+            margin-top: 102px;
+            margin-left: 15px;
+            background-color: #017869;
+            background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(1,120,105,1.00)),color-stop( 100% , rgba(15,123,136,0.99)));
+	        background-image: -webkit-linear-gradient(270deg,rgba(1,120,105,1.00) 0%,rgba(15,123,136,0.99) 100%);
+	        background-image: linear-gradient(180deg,rgba(1,120,105,1.00) 0%,rgba(15,123,136,0.99) 100%);   
+        }
+        .innerd
+        {
+            width: 1149px;
+            height: 40px;
+            margin-left: 45px;
+            margin-top: 27px;
+        }
+        .a1
+        {
+            margin-left:60px;
+            color:White;
+            font-family:Arial;
+            font-size:12px;
+        }
+        .style35
+        {
+            position:fixed;
+            width: 574px;
+            float:left;
+            height: 32px;
+            margin-left: 165px;
+            margin-top: 16px;
+            top: -9px;
+            left: 184px;
+        }
+        .ima
+        {
+       float:left; 
+       width:170px;
+       height:37px;  
+        margin-left:90px;
+           margin-top:5px;    
+        }
+        .logout
+        {
+            margin:11px 200px 0 0;
+            padding-top:4px;
+            width:60px;
+            height:25px;
+            float:right;
+           
+        }
+        
+        .logoutbtn
+        {
+          font-family:Arial;
+          color:White;  
+          display:block;
+          border:none;
+          text-decoration:none;
+          font-size:14px;
+          background:none;
+        }
+        
+        .logoutbtn:hover
+        {	
+            color:#ECE9E9;
+            cursor:pointer;
+        }
+        .navbar
+        {
+	        height: 31px;
+            width: 224px;
+            margin-top:68px;
+            float:left;
+            background-color: #017869;
+            border-bottom-right-radius:20px;
+            border-bottom-left-radius:20px; 
+            box-shadow:1px 2px 5px Black;
+             background-image: linear-gradient(180deg,rgba(1,120,105,1.00) 0%,rgba(15,123,136,0.99) 100%);
+	        margin-left: 500px;
+            position:fixed;
+            top: -19px;
+            left: 14px;
+        }
+        
+       ul
+        {
+            list-style-type: none;
+          margin-top:5px;
+          margin-left:4px;
+           
+        }
+
+       li 
+       {
+           margin-right:8px;
+            display: inline;
+            float:left;
+       }
+      .navbar a 
+       {
+           text-align:center;
+           color:White;
+           font-family:Arial;
+           font-size:15px;
+             display: block;
+             width: 61px;
+             text-decoration:none;
+         }
+         .navbar a:hover
+         {
+             color:#ECE9E9;
+            cursor:pointer;
+         }
+       .maincont1
+       {
+           margin-top:130px;
+           width:100%;
+       }
+       body   
+        {
+            background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(237,235,235,1.00)),color-stop( 98.96% , rgba(231,228,228,1.00)));
+	        background-image: -webkit-linear-gradient(270deg,rgba(237,235,235,1.00) 0%,rgba(231,228,228,1.00) 98.96%);
+	        background-image: linear-gradient(180deg,rgba(237,235,235,1.00) 0%,rgba(231,228,228,1.00) 98.96%);
+        }
+        .searchbox1
+        {
+            border-style: none;
+            border-color: inherit;
+            border-width: medium;
+            border-radius:4px;
+            float:left;
+            margin-left: 55px;
+        }
+        .searchbox1:hover
+        {
+           box-shadow:0px 1px 1px #226BB5;
+        }
+        
+         .maincont
+       {
+           width:100%;
+           height:769px;
+       }
+       .left-side
+       {
+           float:left;
+           width:315px;
+           height:700px;
+          
+       }
+       .Right-side
+       {
+           float:right;
+           width:339px;
+           height:700px;
+            margin-left: 0px;
+        }
+       .Mid
+       {
+           float:left;
+           margin-left:0px;
+           width:534px;
+           height:700px;
+            margin-right: 12px;
+            margin-top: 91px;
+        }
+        .pic
+        {
+            position:fixed;
+            float:left;
+            margin-top:110px;
+            margin-left:40px;
+            width:262px;
+            height:236px;
+            left: -4px;
+            top: -4px;
+        }
+        .style48
+        {
+            float:left;
+           border-radius:9px;
+         border:2px solid White;
+        box-shadow:0px 0px 5px Gray;
+            top: 99px;
+            left: 58px;
+            margin-top: 0px;
+        }
+        .uname
+        {
+           
+            float:left;
+            margin-top: 5px;
+            top: 105px;
+            left: 58px;
+            color: #017869;
+            margin-left: 6px;
+        }
+        .info
+        {
+            position:fixed;
+            float:right;
+            width:254px;
+            height:176px;
+            margin-left:40px;
+            margin-right:40px;
+            margin-top: 360px;
+            border-radius:3px;
+            position:fixed;
+            box-shadow:0px 0px 5px Gray;
+            top: -5px;
+            left: 1px;
+        }
+        
+        .style49
+        {
+            width: 100%;
+            margin-top: 6px;
+        }
+        
+        .style50
+        {
+            width: 108px;
+        }
+        .style51
+        {
+            width: 108px;
+            height: 27px;
+        }
+        .style52
+        {
+            height: 27px;
+        }
+        .style53
+        {
+            width: 108px;
+            height: 29px;
+        }
+        .style54
+        {
+            height: 29px;
+        }
+        .style55
+        {
+            width: 108px;
+            height: 32px;
+        }
+        .style56
+        {
+            height: 32px;
+        }
+        
+        .style57
+        {
+            margin-left: 98px;
+        }
+        .lbls
+        {
+            margin-left:5px;
+            font-family:Arial;
+            color:White;
+        }
+        .dynamiclbl
+        {
+          color: #017869;  
+            font-family:Arial;
+          
+        }
+        .Friends-list
+        {
+            width:269px;
+            height:479px;
+            float:right;
+            margin-top: 138px;
+            margin-right:20px;
+            position:fixed;
+            top: -47px;
+            left:938px;
+        }
+        .friend-box
+        {
+            width:224px;
+            height:63px;
+            border-radius:3px;
+            box-shadow:0px 0px 5px Gray;
+            margin-left: 8px;
+            margin-top:8px;
+        }
+        .friend-img
+        {
+            width:60px;
+            height:60px;
+            float:left;
+            margin-left: 12px;
+            margin-top: 1px;
+        }
+        .friend-name
+        {
+            width:100px;
+            height:60px;
+            float:right;
+           
+        }
+        .firend-name
+        {
+            height: 44px;
+            margin-left: 77px;
+            margin-top: 6px;
+            width: 214px;
+        }
+        .friendname
+        {
+            color: White; 
+            font-family:Arial;
+            float:left;
+            margin-left:6px;
+            margin-top: 19px;
+            background-color:#ECE9E9;
+            border:none;
+        }
+        .friend-search
+        {
+            float:right;
+            width:272px;
+            height:90px;
+            border-radius:3px;
+            box-shadow:0px 0px 5px Gray;
+            margin-right:-6px;
+        }
+        .style58
+        {
+            margin-top: 3px;
+        }
+            .searchbox:hover
+            {
+             box-shadow:0px 0px 2px Gray;
+            }
+            .friends-rep
+            {
+            float:left;
+            width:268px;
+            height :443px;
+            border-radius:3px;
+            box-shadow:0px 0px 5px Gray;
+            margin-top: 12px;
+            margin-left:6px;
+            margin-right: 0px;
+            overflow:scroll;
+            overflow-x:hidden;
+        }
+            .Post-Video
+            {
+                   
+            float:right;
+            width:526px;
+            height:158px;   
+            margin-top:138px;
+            margin-right:-35px;
+            border-radius:3px;
+            box-shadow:0px 0px 5px Gray;
+            
+            }
+        .post-upload
+        {
+            width:526px;
+            height:62px;
+           
+            margin-top: 19px;
+            border-top:1px solid Gray;
+        }
+        .searchbox
+        {
+            border-style: none;
+            border-color: inherit;
+            border-width: medium;
+            margin-left: 4px;
+            margin-top: 5px;
+            border-radius:4px;
+        }
+       
+        .style59:hover
+        {
+            box-shadow:0px 0px 2px Gray;
+        }
+       
+        .videos-sec
+        {
+            width:526px;
+            height:352px;
+            border-top:1px solid Gray;
+            margin-top: 41px;
+            float:right;
+            margin-right:-35px;
+            border-radius:3px;
+            box-shadow:0px 0px 5px Gray;
+       
+        }
+       .video-text
+       {
+            width:515px;
+            height:70px;
+            margin-left:5px;
+            float:left;
+             border-bottom:1px solid Gray;
+       }
+       .video-likes
+       {
+           margin-top:4px;
+            width:526px;
+            height:29px;
+            float:right;
+             border-top:1px solid Gray;
+           
+       }
+       .User-video
+       {
+            width:526px;
+            height:242px;
+            float:right;
+            
+       }
+        .clbl
+        {
+           font-family:Arial Unicode MS;
+           color:White;
+           margin-left:15px;
+        }
+        .catg
+        {
+            font-family:Arial Unicode MS;
+           color: #017869;
+           margin:0 0 0 5px;
+        }
+        .desc
+       {
+           float:left;
+          margin-left:10px;
+          margin-top:10px;
+       }
+        .style37
+        {
+            margin-top: 0px;
+        }
+        .style64
+        {
+            border-style: none;
+            border-color: inherit;
+            border-width: medium;
+            font-family:Arial;
+            color:White;  
+            font-size:14px;
+            background:none;
+            margin-left: 42px;
+            margin-top: 1px;
+        }
+        .homecss
+        {
+             border-style: none;
+            border-color: inherit;
+            border-width: medium;
+            font-family:Arial;
+            color:White;  
+            font-size:14px;
+            background:none;
+            margin-left: 0px;
+        }
+        .drop
+        {
+            float:right;
+          margin-right:20px;
+            margin-top: 1px;
+            margin-left: 0px;
+        }
+        .btn
+        {
+          
+            float:right;
+            margin-left: 0px;
+        }
+        .style65
+        {
+            margin-left: 11px;
+            margin-top: 6px;
+        }
+        .style66
+        {}
+    </style>
+     <asp:ContentPlaceHolder ID="head1" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="page">
+         <div class="style1" style="position:fixed;  height: 48px; top:0px; -webkit-box-shadow: 0px 0px 1px #333333;
+	box-shadow:0px 3px 4px #333333;  border-bottom:0px solid Black; left: 0px;">
+       <div class="ima">
+       <asp:Image ID="Image1" runat="server" Height="37px"
+              Width="142px" ImageUrl="~/Images/socialhomelogo.png" CssClass="style37" />
+    </div>
+             <div class="style35">
+                 <asp:TextBox ID="TextBox1" runat="server" Width="265px" 
+                 CssClass="searchbox1"    Height="23px" TextMode="Search" 
+                     ontextchanged="TextBox1_TextChanged">Search Home</asp:TextBox>
+                 <asp:Button ID="Button2" runat="server" CssClass="btn" Text="Search" 
+                     Height="24px" Width="76px" onclick="Button2_Click" />
+                 <asp:DropDownList ID="hcat" runat="server" CssClass="drop" 
+                     Height="22px" Width="114px">
+                     <asp:ListItem Value="1">Personal</asp:ListItem>
+                     <asp:ListItem Value="2">Social</asp:ListItem>
+                     <asp:ListItem Value="3">Friends</asp:ListItem>
+                     <asp:ListItem Value="4">Family</asp:ListItem>
+                 </asp:DropDownList>
+             </div>
+             <div class="logout">
+                 <asp:Button ID="logoutbutton" runat="server" Text="Logout" CssClass="logoutbtn" 
+                     Width="49px" onclick="logoutbutton_Click" />
+             </div>
+     </div>
+     <div class="navbar">
+    
+        <asp:Button ID="wallbtn" runat="server" Text="Wall" 
+                     Width="51px" CssClass="style64" Height="21px" />
+   <asp:Button ID="homebtn" runat="server" Text="home" 
+                     Width="105px" CssClass="homecss" Height="21px" 
+             Font-Names="Arial Unicode MS" onclick="homebtn_Click" />
+     </div>
+      
+      
+          
+            
+            <div class="maincont">
+      <div class="left-side">
+      <div class="pic">
+        <asp:Image ID="Userimage" runat="server" CssClass="style48" 
+              ImageUrl="~/Images/default_pic.png" Width="253px" Height="200px" />
+          <asp:Label ID="UserNamelabel" runat="server" Text="User Name" CssClass="uname" 
+              Font-Bold="False" Font-Names="Arial Unicode MS" ForeColor="#017869" 
+              Width="144px"></asp:Label>
+      </div>
+      <div class="info">
+          <table class="style49">
+              <tr>
+                  <td class="style51">
+                      <asp:Label ID="Label1" runat="server" CssClass="lbls" Text="By Profession"></asp:Label>
+                  </td>
+                  <td class="style52">
+                      <asp:Label ID="Label5" runat="server" CssClass="dynamiclbl" Text="Profession"></asp:Label>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="style53">
+                      <asp:Label ID="Label2" runat="server" CssClass="lbls" Text="Country"></asp:Label>
+                  </td>
+                  <td class="style54">
+                      <asp:Label ID="Label6" runat="server" CssClass="dynamiclbl" Text="Pakistan"></asp:Label>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="style55">
+                      <asp:Label ID="Label3" runat="server" CssClass="lbls" Text="Date of birth"></asp:Label>
+                  </td>
+                  <td class="style56">
+                      <asp:Label ID="Label7" runat="server" CssClass="dynamiclbl" Text="12/12/12"></asp:Label>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="style55">
+                      <asp:Label ID="Label4" runat="server" CssClass="lbls" Text="Join in"></asp:Label>
+                  </td>
+                  <td class="style56">
+                      <asp:Label ID="Label8" runat="server" CssClass="dynamiclbl" Text="12/12/12"></asp:Label>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="style50">
+                      &nbsp;</td>
+                  <td>
+                      <asp:ImageButton ID="SettingImageButton" runat="server" CssClass="style57" 
+                          Height="23px" ImageUrl="~/Images/Setting.png" Width="24px" />
+                  </td>
+              </tr>
+              </table>
+          </div>
+      </div>
+
+
+      
+      <div class="Mid">
+       <asp:ContentPlaceHolder ID="mainContent1" runat="server">
+     
+             </asp:ContentPlaceHolder>
+      </div>
+
+
+
+      <div class="Right-side">
+
+            <div class="Friends-list">
+                 <div class="friend-search">
+                <asp:Panel ID="panel1" runat="server" DefaultButton="sbmt" CssClass="style66" 
+                         Height="80px">
+                          <asp:TextBox ID="TextBox2" runat="server" CssClass="searchbox" Height="28px" 
+                               Width="236px" Font-Names="Arial Unicode MS" ForeColor="#666666" 
+                              TextMode="Search" ontextchanged="TextBox2_TextChanged">Search Friend</asp:TextBox>
+                              <asp:Button ID="sbmt" runat="server" Width="50px" Height="25px" 
+                              CssClass="style65" onclick="sbmt_Click" Text="submit" />
+                </asp:Panel>
+                 </div>
+                <div class="friends-rep">
+                     <asp:Repeater ID="friend_rep" runat="server" onitemcommand="friend_rep_ItemCommand" 
+                        >
+                         <ItemTemplate>
+                             <div class="friend-box">
+                                   <asp:HiddenField ID="Hiddenid" runat="server" Value='<%# Eval("Friend_ID") %>' />
+                                    <div class="friend-img">
+                                          <img src='Userpics/<%# Eval("Column1") %>' alt='Images/default_pic.png' height="51px" width="58px" class="style58" />
+                                    </div>
+                              <div class="firend-name">
+                                  <asp:Button ID="namebutn" runat="server" CssClass="friendname" Text='<%# Eval("Friend_Name") %>'
+                                      Height="22px" Width="137px" ForeColor="#017869"></asp:Button>
+                             </div>
+                           </div>
+                </ItemTemplate>
+                 </asp:Repeater>
+            </div>
+             </div>
+   </div>
+        
+    </div>
+           
+    </div>
+    </form>
+</body>
+</html>
